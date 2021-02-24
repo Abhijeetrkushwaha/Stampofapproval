@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CurriculumInfo({ formData, setForm, navigation }) {
+function CurriculumInfo({ formData, setForm, navigation, handleKeyPress }) {
   const { standard, stream, giNo, prnNo, date } = formData
   
   return (
@@ -17,11 +17,11 @@ function CurriculumInfo({ formData, setForm, navigation }) {
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
-          <input name="giNo" value={giNo} autoComplete="off" onChange={setForm} type="tel" placeholder="GI No." />
+          <input name="giNo" value={giNo} autoComplete="off" onChange={setForm} type="tel" onKeyPress={handleKeyPress} maxLength="10" placeholder="GI No." />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
-          <input name="prnNo" value={prnNo} autoComplete="off" onChange={setForm} type="tel" placeholder="PRN No." />
+          <input name="prnNo" value={prnNo} autoComplete="off" onChange={setForm} type="tel" onKeyPress={handleKeyPress} maxLength="16" placeholder="PRN No." />
         </div>
         <div className="input-group">
           <input name="date" value={date} autoComplete="off" onChange={setForm} type="date" placeholder="PRN No." />
