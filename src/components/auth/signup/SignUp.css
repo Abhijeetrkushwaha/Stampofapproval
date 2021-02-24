@@ -48,7 +48,8 @@
   color: rgb(160, 159, 159);
 }
 .btn{
-  background-color: #DA1D19;
+  background-color: #0F0F3A;
+  /* background-color: #DA1D19; */
   color: #fff;
   border-radius: 25px;
   padding: 10px 15px;
@@ -65,7 +66,10 @@
   font-size: 14px;
 }
 .btn--blue{
-  background-color: blue;
+  color: #fff;
+  background: linear-gradient(to top, #4292ff, #388cff, #2e86ff, #2380ff, #177aff);
+  /* border: 2px solid #0F0F3A; */
+  font-weight: bold;
 }
 .btn:focus{
   outline: none;
@@ -77,6 +81,9 @@
 .btns{
   display: flex;
   justify-content: space-between;
+}
+.btn--blue:hover{
+  color: #fff;
 }
 .single__btn{
   margin-top: 20px;
