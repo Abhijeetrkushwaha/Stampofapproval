@@ -4,7 +4,7 @@ import { db } from '../../firebase'
 
 function Dashboard({ user }) {
   const [userInfo, setUserInfo] = useState({});
-  console.log(userInfo);
+  // console.log(userInfo);
 
   useEffect(() => {
     if(user) {
@@ -22,8 +22,8 @@ function Dashboard({ user }) {
     <>
       {!user ? (<Redirect to="/signup" />) : (
         <div className="container">
-          <div className="dashboard p__top">
-            Dashboard
+          <div className="dashboard p__top text-center">
+            <h2>{userInfo.userName && `Welcome ${userInfo.userName}`}</h2>
           </div>
         </div>
       )}

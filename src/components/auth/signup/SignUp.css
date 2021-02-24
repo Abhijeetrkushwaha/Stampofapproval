@@ -99,3 +99,16 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
+.date__field{
+  display: flex;
+  align-items: center;
+}
+.date__field p {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .date__field p {
+    display: block;
+  }
+}

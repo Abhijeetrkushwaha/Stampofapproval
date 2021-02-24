@@ -23,8 +23,9 @@ function CurriculumInfo({ formData, setForm, navigation, handleKeyPress }) {
           <span className="form-icon"><i className="far fa-address-book"></i></span>
           <input name="prnNo" value={prnNo} autoComplete="off" onChange={setForm} type="tel" onKeyPress={handleKeyPress} maxLength="16" placeholder="PRN No." />
         </div>
-        <div className="input-group">
-          <input name="date" value={date} autoComplete="off" onChange={setForm} type="date" placeholder="PRN No." />
+        <div className="input-group date__field">
+          <p className="pr-1">Date</p>
+          <input name="date" value={date} autoComplete="off" onChange={setForm} type="date" placeholder="Date" />
         </div>
       </form>
       <div className="btns">
