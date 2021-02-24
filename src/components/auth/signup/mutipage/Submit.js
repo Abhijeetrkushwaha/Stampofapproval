@@ -70,7 +70,7 @@ function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage,
         
       return true
     }
-    setErrorMessage('All Fields Are Required')
+    setErrorMessage('All Fields Are Required.')
   }
 
   return (
