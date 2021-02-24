@@ -97,6 +97,8 @@
 .choosen__file{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   margin-bottom: 10px;
 }
 .date__field{
@@ -110,5 +112,8 @@
 @media screen and (max-width: 768px) {
   .date__field p {
     display: block;
+  }
+  .choosen__file h5{
+    font-size: 15px;
   }
 }
