@@ -40,6 +40,13 @@ function SignUp(property) {
   const props = { formData, setForm, navigation }
   const submitPorps = { errorMessage, setErrorMessage, profileImg, setProfileImg }
 
+  const handleKeyPress = (e) => {
+    let charCode = (e.which) ? e.which : e.keyCode
+    if(charCode > 31 && (charCode < 48 || charCode > 57)) {
+      e.preventDefault();
+    }
+  }
+
   if(user) {
    return (
      <><Redirect to="/" /></>
@@ -50,7 +57,7 @@ function SignUp(property) {
     return (
       <div className="container">
         <div className="signup">
-          <PersonalInfo { ...props } />
+          <PersonalInfo { ...props } handleKeyPress={handleKeyPress}/>
         </div>
       </div>
     )
@@ -58,7 +65,7 @@ function SignUp(property) {
     return (
       <div className="container">
         <div className="signup">
-          <CurriculumInfo { ...props } />
+          <CurriculumInfo { ...props } handleKeyPress={handleKeyPress}/>
         </div>
       </div>
     )

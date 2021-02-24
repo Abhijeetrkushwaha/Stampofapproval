@@ -34,7 +34,7 @@ function LogIn({user, history}) {
                 <input name="email" value={email} autoComplete="off" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
               </div>
               <div className="input-group">
-                <span className="form-icon"><i class="fas fa-lock"></i></span>
+                <span className="form-icon"><i className="fas fa-lock"></i></span>
                 <input name="password" value={password} autoComplete="off" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
               </div>
               <button className="btn btn--lg">Log In</button>

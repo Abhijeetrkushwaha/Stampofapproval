@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function PersonalInfo({ formData, setForm, navigation }) {
+function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
   const { userName, email, aaddharNo, mobileNo, password } = formData
 
   return (
@@ -18,16 +18,16 @@ function PersonalInfo({ formData, setForm, navigation }) {
           <input name="email" value={email} autoComplete="off" onChange={setForm} type="email" placeholder="Email" />
         </div>
         <div className="input-group">
-          <span className="form-icon"><i class="fas fa-lock"></i></span>
+          <span className="form-icon"><i className="fas fa-lock"></i></span>
           <input name="password" value={password} autoComplete="off" onChange={setForm} type="password" placeholder="Passwaord" />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
-          <input name="aaddharNo" value={aaddharNo} autoComplete="off" onChange={setForm} type="tel" maxLength="14" placeholder="Aaddhar No." />
+          <input name="aaddharNo" value={aaddharNo} autoComplete="off" onChange={setForm} type="tel" maxLength="14" onKeyPress={handleKeyPress} placeholder="Aaddhar No." />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-mobile-alt"></i></span>
-          <input name="mobileNo" value={mobileNo} autoComplete="off" onChange={setForm} type="tel" maxLength="10" placeholder="Mobile No." />
+          <input name="mobileNo" value={mobileNo} autoComplete="off" onChange={setForm} type="tel" maxLength="10" onKeyPress={handleKeyPress} placeholder="Mobile No." />
         </div>
       </form>
       <button className="btn btn--lg" onClick={() => navigation.next()}>Next <i className="fas fa-arrow-right"></i></button>
