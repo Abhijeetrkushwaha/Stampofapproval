@@ -1,0 +1,101 @@
+.p__top{
+  padding-top: 70px;
+}
+.signup{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup__info{
+  background-color: #fff;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.login{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login__info{
+  background-color: #fff;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.input-group input{
+  width: 100%;
+  padding: 10px 30px 10px 15px;
+  border-radius: 30px;
+  border: 2px solid rgb(160, 159, 159);
+  margin: 0px 0 15px;
+}
+.input-group input[type="date"]{
+  width: initial;
+  padding: 10px 15px 10px 15px;
+}
+.input-group input:focus{
+  outline: none;
+}
+.input-group .form-icon{
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  color: rgb(160, 159, 159);
+}
+.btn{
+  background-color: #DA1D19;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 15px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+}
+.btn--sm{
+  width: 120px;
+}
+.btn--lg{
+  width: 100%;
+}
+.btn--xsm{
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.btn--blue{
+  background-color: blue;
+}
+.btn:focus{
+  outline: none;
+  box-shadow: none;
+}
+.btn:hover{
+  color: #fff;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+}
+.single__btn{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.profile__img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profile__img img{
+  border: 2px solid #000;
+}
+.err{
+  color: red;
+}
+.choosen__file{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
