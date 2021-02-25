@@ -23,7 +23,7 @@ function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
-          <input name="aaddharNo" value={aaddharNo} autoComplete="off" onChange={setForm} type="tel" maxLength="14" onKeyPress={handleKeyPress} placeholder="Aadhaar No." />
+          <input name="aaddharNo" value={aaddharNo} autoComplete="off" onChange={setForm} type="tel" maxLength="16" onKeyPress={handleKeyPress} placeholder="Aadhaar No." />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-mobile-alt"></i></span>
