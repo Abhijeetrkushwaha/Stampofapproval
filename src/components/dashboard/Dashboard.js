@@ -6,7 +6,7 @@ import './Dashboard.css'
 
 function Dashboard({ user }) {
   const [userInfo, setUserInfo] = useState({});
-  console.log(userInfo);
+  // console.log(userInfo);
 
   useEffect(() => {
     if(user) {
