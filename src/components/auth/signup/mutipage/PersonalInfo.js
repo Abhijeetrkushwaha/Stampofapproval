@@ -19,7 +19,7 @@ function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-lock"></i></span>
-          <input name="password" value={password} autoComplete="off" onChange={setForm} type="password" placeholder="Passwaord" />
+          <input name="password" value={password} autoComplete="off" onChange={setForm} type="password" placeholder="Password" />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
