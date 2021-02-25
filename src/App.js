@@ -7,6 +7,7 @@ import { auth } from './firebase';
 import Dashboard from './components/dashboard/Dashboard';
 import LogIn from './components/auth/signin/LogIn';
 import InitialLoader from './components/loader/InitialLoader';
+import ErrorPage from './components/errorpage/ErrorPage'
 
 function App() {
   const [waitToLoad, setWaitToLoad] = useState(false);
@@ -49,6 +50,7 @@ function App() {
               { (props) => <SignUp {...props} user={user} />} />
               <Route path='/login' render=
               { (props) => <LogIn {...props} user={user} />} />
+              <Route path="*" component={ErrorPage} />
             </Switch>
           </main>
         </div>
