@@ -1,14 +1,17 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { auth } from '../../firebase'
-import './NavBar.css'
+import './NavBar.css';
+import Stamp from './stamp.png'
 
 function NavBar({ user }) {
 
   return (
     <nav>
       <div className="container text-center nav__bar">
-        <div className="brand-logo">StampOfApproval</div>
+        <Link to="/" className="brand-logo">
+          <img src={Stamp} alt=""/>
+        </Link>
         <ul className="nav-list">
           {
             user ? (

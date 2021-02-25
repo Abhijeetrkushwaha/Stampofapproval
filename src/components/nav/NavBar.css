@@ -2,7 +2,7 @@ nav{
   background-color: #0F0F3A;
   color: #fff;
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -14,6 +14,14 @@ li{
   list-style: none;
   text-decoration: none;
 }
+.brand-logo{
+  width: 100px;
+  position: relative;
+}
+.brand-logo img{
+  width: 100%;
+  height: auto;
+}
 .nav-links{
   color: #fff;
 }
@@ -22,11 +30,11 @@ li{
   text-decoration: none;
 }
 .active{
-  color: #fff;
+  color: #3188FF;
   font-weight: bold;
 }
 .active:hover{
-  color: #fff;
+  color: #3188FF;
 }
 .nav__bar{
   display: flex;
