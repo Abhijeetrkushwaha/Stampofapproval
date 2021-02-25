@@ -34,9 +34,8 @@ function SignUp(property) {
   const [formData, setForm] = useForm(defaultData);
   const { step, navigation } = useStep({
     steps,
-    initialStep: 2,
+    initialStep: 0,
   })
-
   const props = { formData, setForm, navigation }
   const submitPorps = { errorMessage, setErrorMessage, profileImg, setProfileImg }
 

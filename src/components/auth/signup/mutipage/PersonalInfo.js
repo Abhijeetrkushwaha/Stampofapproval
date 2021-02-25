@@ -11,7 +11,7 @@ function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
         <h4 className="text-center">Personal Info</h4>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-user"></i></span>
-          <input name="userName" value={userName} autoComplete="off" onChange={setForm} type="text" placeholder="Username" />
+          <input name="userName" className="has__error" value={userName} autoComplete="off" onChange={setForm} type="text" placeholder="Username" />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-envelope"></i></span>
