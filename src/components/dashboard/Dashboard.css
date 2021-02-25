@@ -1,0 +1,13 @@
+.dashboard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user__img{
+  width: 50px;
+}
+.user__img img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}

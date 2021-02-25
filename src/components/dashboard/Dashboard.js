@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect } from "react-router-dom";
-import { db } from '../../firebase'
+import { db } from '../../firebase';
+import './Dashboard.css'
+// import Placeholder from './placeholder.jpg';
 
 function Dashboard({ user }) {
   const [userInfo, setUserInfo] = useState({});
-  // console.log(userInfo);
+  console.log(userInfo);
 
   useEffect(() => {
     if(user) {
@@ -23,7 +25,10 @@ function Dashboard({ user }) {
       {!user ? (<Redirect to="/signup" />) : (
         <div className="container">
           <div className="dashboard p__top text-center">
-            <h2>{userInfo.userName && `Welcome ${userInfo.userName}`}</h2>
+            <div className="user__img pr-2">
+              { userInfo.url && <img src={userInfo.url} alt="profile pic"/>}
+            </div>
+            <span>{userInfo.userName && `Welcome ${userInfo.userName}`}</span>
           </div>
         </div>
       )}
