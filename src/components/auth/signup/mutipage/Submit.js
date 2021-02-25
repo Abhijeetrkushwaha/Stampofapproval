@@ -106,7 +106,7 @@ function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage,
         <div className="err text-center pt-1"><p>{errorMessage}</p></div>
       </form>
       <div className="single__btn">
-        <button className="btn btn--sm btn--blue" onClick={() => navigation.previous()}><i className="fas fa-arrow-left"></i> Previous</button>
+        <button className="btn btn--sm btn--blue" disabled = {(onDisable)? "disabled" : ""} onClick={() => navigation.previous()}><i className="fas fa-arrow-left"></i> Previous</button>
       </div>
     </div>
   )
