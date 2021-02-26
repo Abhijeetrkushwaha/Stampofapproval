@@ -20,6 +20,9 @@ function NavBar({ user }) {
                   <NavLink exact to="/" className="nav-links">Home</NavLink>
                 </li>
                 <li className="nav-item">
+                  <NavLink exact to="/profile" className="nav-links">Profile</NavLink>
+                </li>
+                <li className="nav-item">
                   <Link className="nav-links" to="/" onClick={() => {auth.signOut()}}>
                     logout
                   </Link>
