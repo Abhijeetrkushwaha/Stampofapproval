@@ -13,7 +13,7 @@ function CurriculumInfo({ formData, setForm, navigation, handleKeyPress }) {
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
-          <input name="stream" value={stream} autoComplete="off" onChange={setForm} type="text" placeholder="Stream" />
+          <textarea name="stream" value={stream} autoComplete="off" rows="1" onChange={setForm} type="text" placeholder="Address" />
         </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>

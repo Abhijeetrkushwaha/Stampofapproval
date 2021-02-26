@@ -27,7 +27,7 @@
   max-width: 500px;
   border-radius: 10px;
 }
-.input-group input{
+.input-group input, .input-group textarea{
   width: 100%;
   padding: 10px 30px 10px 15px;
   border-radius: 30px;
@@ -38,7 +38,7 @@
   width: initial;
   padding: 10px 15px 10px 15px;
 }
-.input-group input:focus{
+.input-group input:focus, .input-group textarea:focus{
   outline: none;
 }
 .input-group .form-icon{
