@@ -4,8 +4,8 @@
   justify-content: space-around;
 } 
 .user__img img{
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   border: 2px solid #0F0F3A;
 }
