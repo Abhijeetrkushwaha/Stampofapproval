@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Redirect, Link } from "react-router-dom";
 import { db } from '../../firebase';
 import './Dashboard.css'
+import DocUpload from './docupload/DocUpload';
 // import Placeholder from './placeholder.jpg';
 
 function Dashboard({ user }) {
@@ -65,9 +66,7 @@ function Dashboard({ user }) {
               </div>
               <div className="col-12 col-lg-7">
                 <div className="card mb-3">
-                  <div className="card-body">
-                    PDF Uploading Section
-                  </div>
+                  <DocUpload user={user} userInfo={userInfo} />
                 </div>
                 <div className="card d-block d-lg-none dashboard__note">
                   <div className="card-header">
