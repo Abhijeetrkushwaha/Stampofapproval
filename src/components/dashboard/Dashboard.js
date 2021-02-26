@@ -53,13 +53,13 @@ function Dashboard({ user }) {
                   </div>
                 </div>
                 <div className="card d-none d-lg-block dashboard__note">
-                  <div class="card-header">
+                  <div className="card-header">
                     Note
                   </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">PICTURE MUST BE IN JPEG FORMATE.</li>
-                    <li class="list-group-item">SIZE MUST NOT EXCEED 150 KB.</li>
-                    <li class="list-group-item">FORM MUST BE SCANNED VIA SCANNER.</li>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">PICTURE MUST BE IN JPEG FORMATE.</li>
+                    <li className="list-group-item">SIZE MUST NOT EXCEED 150 KB.</li>
+                    <li className="list-group-item">FORM MUST BE SCANNED VIA SCANNER.</li>
                   </ul>
                 </div>
               </div>
@@ -69,10 +69,15 @@ function Dashboard({ user }) {
                     PDF Uploading Section
                   </div>
                 </div>
-                <div className="card d-block d-lg-none">
-                  <div className="card-body">
-                    Note in small
-                  </div>
+                <div className="card d-block d-lg-none dashboard__note">
+                  <div className="card-header">
+                      Note
+                    </div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item">PICTURE MUST BE IN JPEG FORMATE.</li>
+                      <li className="list-group-item">SIZE MUST NOT EXCEED 150 KB.</li>
+                      <li className="list-group-item">FORM MUST BE SCANNED VIA SCANNER.</li>
+                    </ul>
                 </div>
               </div>
             </div>
