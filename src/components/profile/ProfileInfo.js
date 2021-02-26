@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
+import { db } from '../../firebase'
 
-function ProfileInfo({ userInfo }) {
+function ProfileInfo({ userInfo, user }) {
   const [userName, setUserName] = useState('')
   const [lastName, setLastName] = useState('')
   const [aaddharNo, setAaddharNo] = useState('')
@@ -11,6 +12,9 @@ function ProfileInfo({ userInfo }) {
   const [prnNo, setPrnNo] = useState('')
   
   const [toggle, setToggle] = useState(true)
+  const [showMessage, setShowMessage] = useState(false)
+
+  const inputRef = useRef(null)
  
 
   useEffect(() => {
@@ -29,23 +33,48 @@ function ProfileInfo({ userInfo }) {
   //   <input type="text" value={text} onChange={e => setText(e.target.value)}/>
   //                   <button onClick={handleClick}>Edit</button> 
   // const handleClick = (e) => {
-  //   db.collection("users").doc(user.uid).update({
-  //       userName: text,
-  //   })
-  //   .then(() => {
-  //       console.log("Document successfully updated!");
-  //   })
-  //   .catch((error) => {
-  //       // The document probably doesn't exist.
-  //       console.error("Error updating document: ", error);
-  //   });
+    // db.collection("users").doc(user.uid).update({
+    //     userName: text,
+    // })
+    // .then(() => {
+    //     console.log("Document successfully updated!");
+    // })
+    // .catch((error) => {
+    //     // The document probably doesn't exist.
+    //     console.error("Error updating document: ", error);
+    // });
   // }
   const handleEditClick = () => {
     setToggle(false)
+    inputRef.current.focus()
   }
 
   const handleUpdateClick = () => {
-    setToggle(true)
+    if(standard.trim().length > 0 && lastName.trim().length > 0 && stream.trim().length > 0 && giNo.trim().length > 0 && prnNo.trim().length > 0 && userName.trim().length > 0 && aaddharNo.trim().length > 0 && mobileNo.trim().length > 0) {
+
+      db.collection("users").doc(user.uid).update({
+        userName,
+        lastName,
+        aaddharNo,
+        mobileNo,
+        standard,
+        stream,
+        giNo,
+        prnNo
+      })
+      .then(() => {
+        console.log('success')
+          setShowMessage(true)
+          setTimeout(() => {
+            setShowMessage(false)
+          }, 2000)
+      })
+      .catch((error) => {
+          // The document probably doesn't exist.
+          console.error("Error updating document: ", error);
+      });
+      setToggle(true);
+    }
   }
   return (
     <>
@@ -53,11 +82,20 @@ function ProfileInfo({ userInfo }) {
         userInfo.url ? (
           <div className="profile__info">
             <div className="container">
+              <div className="toogle__btn d-flex justify-content-end">
+                {
+                  toggle ? (<button className="btn" onClick={handleEditClick}>Edit Profile</button>) :
+                  (<button className="btn" onClick={handleUpdateClick}>Update Profile</button>)
+                }
+              </div>
+              <div className="show__success__message text-center text-danger">
+                {showMessage && `Profile Updated successfully`}
+              </div>
               <div className="row">
                 <div className="col-12 col-lg-6">
                   <div className="input-group profile__info__input">
                     <label htmlFor="userName">Name:</label>
-                    <input name="userName" value={userName} readOnly={toggle} onChange={e => setUserName(e.target.value)} type="text"></input>
+                    <input name="userName" ref={inputRef} value={userName} readOnly={toggle} onChange={e => setUserName(e.target.value)} type="text"></input>
                   </div>
                   <div className="input-group profile__info__input">
                     <label htmlFor="lastName">Last Name:</label>
@@ -91,15 +129,7 @@ function ProfileInfo({ userInfo }) {
                   </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-12">
-                  {
-                    toggle ? (<button className="btn" onClick={handleEditClick}>Edit Profile</button>) :
-                    (<button className="btn" onClick={handleUpdateClick}>Update Profile</button>)
-                  }
-                  
-                </div>
-              </div>
+              
             </div>
           </div>
         ) : (

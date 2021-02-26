@@ -6,9 +6,9 @@ import ProfileHeader from './ProfileHeader';
 import ProfileInfo from './ProfileInfo';
 // import Placeholder from './placeholder.jpg';
 
-function Dashboard({ user }) {
+function Profile({ user }) {
   const [userInfo, setUserInfo] = useState({});
-  console.log(userInfo);
+  // console.log(userInfo);
 
   useEffect(() => {
     if(user) {
@@ -41,7 +41,7 @@ function Dashboard({ user }) {
                 <div className="card mb-3">
                   <div className="card-body">
                     <h5 className="card-header mb-2">Profile Detail</h5>
-                    <ProfileInfo userInfo={userInfo}/>
+                    <ProfileInfo userInfo={userInfo} user={user}/>
                   </div>
                 </div>
               </div>
@@ -53,4 +53,4 @@ function Dashboard({ user }) {
   )
 }
 
-export default Dashboard
+export default Profile
