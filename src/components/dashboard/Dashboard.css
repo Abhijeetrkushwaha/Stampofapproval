@@ -1,10 +1,25 @@
-.dashboard{
+.dashboard__profile__info{
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: space-around;
+} 
 .user__img img{
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  border: 2px solid #0F0F3A;
+}
+.info__detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.info__detail span{
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.dashboard__note .card-header{
+  background-color: #0F0F3A;
+  color: #fff;
 }

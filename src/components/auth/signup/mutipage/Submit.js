@@ -3,7 +3,7 @@ import { storage, db, auth } from "../../../../firebase";
 // import Image from '../img/profile.png'
 
 function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage, setErrorMessage, user, history }) {
-  const { standard, stream, giNo, prnNo, date, userName, email, password, aaddharNo, mobileNo } = formData
+  const { standard, stream, giNo, prnNo, date, userName, email, password, aaddharNo, mobileNo, lastName } = formData
   const [onDisable, setOnDisable] = useState(false)
   // const previewImage = (e) => {
   //   var reader = new FileReader();
@@ -23,7 +23,7 @@ function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage,
     //eslint-disable-next-line
     let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   
-    if( standard.trim().length > 0 && stream.trim().length > 0 && giNo.trim().length > 0 && prnNo.trim().length > 0 && date && userName.trim().length > 0 && email.trim().length > 0 && password.trim().length > 0 && aaddharNo.trim().length > 0 && mobileNo.trim().length > 0 && profileImg) {
+    if( standard.trim().length > 0 && lastName.trim().length > 0 && stream.trim().length > 0 && giNo.trim().length > 0 && prnNo.trim().length > 0 && date && userName.trim().length > 0 && email.trim().length > 0 && password.trim().length > 0 && aaddharNo.trim().length > 0 && mobileNo.trim().length > 0 && profileImg) {
       if(!emailReg.test(email)) {
         setErrorMessage('please enter valid email address');
         return false
@@ -59,6 +59,7 @@ function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage,
               .then((res) => {
                 return db.collection("users").doc(res.user.uid).set({
                   userName,
+                  lastName,
                   email,
                   aaddharNo,
                   mobileNo,

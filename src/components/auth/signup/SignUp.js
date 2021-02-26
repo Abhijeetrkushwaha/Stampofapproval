@@ -9,6 +9,7 @@ import Submit from './mutipage/Submit';
 
 const defaultData = {
   userName: '',
+  lastName: '',
   email: '',
   password: '',
   aaddharNo: '',
