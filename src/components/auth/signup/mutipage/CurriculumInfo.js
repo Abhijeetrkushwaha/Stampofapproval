@@ -1,12 +1,16 @@
 import React from 'react'
 
 function CurriculumInfo({ formData, setForm, navigation, handleKeyPress }) {
-  const { standard, stream, giNo, prnNo, date } = formData
+  const { standard, stream, giNo, mobileNo, prnNo, date } = formData
   
   return (
     <div className="signup__info">
       <form>
         <h4 className="text-center">Curriculum Info</h4>
+        <div className="input-group">
+          <span className="form-icon"><i className="fas fa-mobile-alt"></i></span>
+          <input name="mobileNo" value={mobileNo} autoComplete="off" onChange={setForm} type="tel" maxLength="10" onKeyPress={handleKeyPress} placeholder="Mobile No." />
+        </div>
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
           <input name="standard" value={standard} autoComplete="off" onChange={setForm} type="text" placeholder="Standard" />

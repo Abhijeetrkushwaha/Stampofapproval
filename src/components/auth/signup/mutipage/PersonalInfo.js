@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
-  const { userName, email, aaddharNo, mobileNo, password, lastName } = formData
+  const { userName, email, aaddharNo, password, lastName } = formData
 
   return (
     <div className="signup__info">
@@ -28,10 +28,6 @@ function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
         <div className="input-group">
           <span className="form-icon"><i className="far fa-address-book"></i></span>
           <input name="aaddharNo" value={aaddharNo} autoComplete="off" onChange={setForm} type="tel" maxLength="16" onKeyPress={handleKeyPress} placeholder="Aadhaar No." />
-        </div>
-        <div className="input-group">
-          <span className="form-icon"><i className="fas fa-mobile-alt"></i></span>
-          <input name="mobileNo" value={mobileNo} autoComplete="off" onChange={setForm} type="tel" maxLength="10" onKeyPress={handleKeyPress} placeholder="Mobile No." />
         </div>
       </form>
       <button className="btn btn--lg" onClick={() => navigation.next()}>Next <i className="fas fa-arrow-right"></i></button>
