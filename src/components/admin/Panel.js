@@ -42,7 +42,7 @@ function Panel() {
             </div>
           </div>
           <div className="col-12 col-lg-4">
-            <div className="card">
+            <div className="card mb-3">
               <div className="card-header">
                 <h5>All Students Registered</h5>
               </div>
