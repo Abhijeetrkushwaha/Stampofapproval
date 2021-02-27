@@ -68,7 +68,7 @@ function Dashboard({ user }) {
                 <div className="card mb-3">
                   <DocUpload user={user} userInfo={userInfo} />
                 </div>
-                <div className="card d-block d-lg-none dashboard__note">
+                <div className="card d-block d-lg-none dashboard__note mb-3">
                   <div className="card-header">
                       Note
                     </div>
