@@ -26,7 +26,7 @@ function Admin({user}) {
       { user ? (<Redirect to="/" />) : (
         <div className="container">
           {
-            !valid ? (<Panel />) : (
+            valid ? (<Panel />) : (
               <div className="login">
                 <div className="login__info">
                   <form onSubmit={handleSubmit}>
