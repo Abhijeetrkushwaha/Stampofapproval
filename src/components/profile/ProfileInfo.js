@@ -63,7 +63,7 @@ function ProfileInfo({ userInfo, user }) {
         prnNo
       })
       .then(() => {
-        console.log('success')
+        // console.log('success')
           setShowMessage(true)
           setTimeout(() => {
             setShowMessage(false)
@@ -94,7 +94,7 @@ function ProfileInfo({ userInfo, user }) {
               <div className="row">
                 <div className="col-12 col-lg-6">
                   <div className="input-group profile__info__input">
-                    <label htmlFor="userName">Name:</label>
+                    <label htmlFor="userName">First Name:</label>
                     <input name="userName" ref={inputRef} value={userName} readOnly={toggle} onChange={e => setUserName(e.target.value)} type="text"></input>
                   </div>
                   <div className="input-group profile__info__input">

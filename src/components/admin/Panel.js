@@ -6,7 +6,7 @@ import AllInbox from './AllInbox';
 function Panel() {
   const [documents, setDocuments] = useState([])
   const [users, setUsers] = useState([])
-  // console.log(documents);
+  console.log(documents);
   // console.log(users);
 
   useEffect(() => {
