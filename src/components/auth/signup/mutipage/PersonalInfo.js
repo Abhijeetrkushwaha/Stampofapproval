@@ -8,7 +8,7 @@ function PersonalInfo({ formData, setForm, navigation, handleKeyPress }) {
     <div className="signup__info">
       <form>
         <h3 className="text-center">Sign Up</h3>
-        {/* <h4 className="text-center">Personal Info</h4> */}
+        <h4 className="text-center mb-3">Personal Info</h4>
         <div className="input-group">
           <span className="form-icon"><i className="fas fa-user"></i></span>
           <input name="userName" className="has__error" value={userName} autoComplete="off" onChange={setForm} type="text" placeholder="First Name" />
