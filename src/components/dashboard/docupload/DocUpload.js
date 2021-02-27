@@ -54,6 +54,8 @@ function DocUpload({ user, userInfo }) {
               db.collection("users").doc(user.uid).update({
                 isDoc: 1,
               });
+              setErrorMessage('')
+              setOnDisable(false)
             })
               .catch((err) => {
                 setErrorMessage(err.message)

@@ -8,6 +8,17 @@
   width: 100%;
   height: auto;
 }
-.approve__reject button{
-  width: 100px;
+.show__message{
+  position: relative;
+}
+.show__message span{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: .2s ease;
 }

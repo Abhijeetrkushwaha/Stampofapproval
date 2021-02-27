@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase'
 import AllUsers from './AllUsers';
 import AllInbox from './AllInbox';
+import emailjs from 'emailjs-com';
 
 function Panel() {
   const [documents, setDocuments] = useState([])
   const [users, setUsers] = useState([])
+  const [showMessage, setShowMessage] = useState(false)
   console.log(documents);
   // console.log(users);
 
@@ -24,8 +26,37 @@ function Panel() {
     })
   }, [])
 
+  const deleteMessage = (id) => {
+    db.collection("documents").doc(id).delete();
+    db.collection("users").doc(id).update({
+      isDoc: 0,
+    });
+  }
+
+  const sendEmail = e => {
+    e.preventDefault()
+
+    emailjs.sendForm('service_656qqyi', 'template_oxzmt0m', e.target, 'user_Sb2mbVcQEarLEbbRV2fgl')
+      .then((result) => {
+        setShowMessage(true)
+        setTimeout(() => {
+          setShowMessage(false)
+        }, 1000)
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset()
+  }
+
   return (
     <div className="panel p__top">
+      {
+        showMessage && (
+          <div className="show__message">
+            <span>Message Send</span>
+          </div>
+        )
+      }
       <div className="card">
         <div className="card-body text-center">
           <h3>Admin panel</h3>
@@ -38,7 +69,7 @@ function Panel() {
               <div className="card-header">
                 <h5>Inbox</h5>
               </div>
-              <AllInbox documents={documents}/>
+              <AllInbox documents={documents} sendEmail={sendEmail} deleteMessage={deleteMessage}/>
             </div>
           </div>
           <div className="col-12 col-lg-4">

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
 
-function AllInbox({ documents }) {
+function AllInbox({ documents, sendEmail, deleteMessage }) {
+  const [admin, setAdmin] = useState('Stamp Of Approval')
 
   let allDocuments = documents.length ? (
     documents.map(data => {
@@ -48,9 +49,18 @@ function AllInbox({ documents }) {
                       Document
                     </h5>
                     <div className="approve__reject d-flex justify-content-around">
-                      <button className="btn">Approve</button>
-                      <button className="btn btn--blue">Reject</button>
+                      <form onSubmit={sendEmail}>
+                        <div className="input-group">
+                          <input  name="admin" value={admin} onChange={e => setAdmin(e.target.value)} type="text" />
+                        </div>
+                        <div className="input-group">
+                          <span className="ml-3">Enter Approve or Reject Message:</span>
+                          <input name="message" type="text" placeholder="Approve or Reject" />
+                        </div>
+                        <button className="btn">Send Email</button>
+                      </form>
                     </div>
+                    <button className="btn btn--lg mt-3" onClick={() => deleteMessage(data.id)}>Delete Message</button>
                   </div>
                 </div>
               </div>
