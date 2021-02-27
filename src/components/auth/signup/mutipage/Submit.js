@@ -68,7 +68,8 @@ function Submit({ formData, navigation, setProfileImg, profileImg, errorMessage,
                   giNo,
                   prnNo,
                   date,
-                  url
+                  url,
+                  isDoc: 0,
                 });
               }).then(() => history.push('/'))
               .catch((err) => {

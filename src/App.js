@@ -9,6 +9,7 @@ import LogIn from './components/auth/signin/LogIn';
 import InitialLoader from './components/loader/InitialLoader';
 import ErrorPage from './components/errorpage/ErrorPage';
 import Profile from './components/profile/Profile'
+import Admin from './components/admin/Admin';
 
 function App() {
   const [waitToLoad, setWaitToLoad] = useState(false);
@@ -53,6 +54,7 @@ function App() {
               { (props) => <LogIn {...props} user={user} />} />
               <Route path='/profile' render=
               { (props) => <Profile {...props} user={user} />} />
+              <Route path="/admin" component={Admin} />
               <Route path="*" component={ErrorPage} />
             </Switch>
           </main>
