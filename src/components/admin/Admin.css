@@ -8,3 +8,6 @@
   width: 100%;
   height: auto;
 }
+.approve__reject button{
+  width: 100px;
+}
