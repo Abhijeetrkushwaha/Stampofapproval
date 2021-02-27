@@ -3,6 +3,7 @@ import { Accordion, Card, Button } from 'react-bootstrap';
 
 function AllInbox({ documents, sendEmail, deleteMessage }) {
   const [admin, setAdmin] = useState('Stamp Of Approval')
+  const [email, setEmail] = useState('')
 
   let allDocuments = documents.length ? (
     documents.map(data => {
@@ -26,7 +27,7 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
                       <li className="list-group-item">
                         <span className="font-weight-bold">Name:</span><br/>
                         <p>{data.document.userInfo.userName} {data.document.userInfo.lastName}</p>
-                        <span className="font-weight-bold">Address:</span><br/>
+                        <span className="font-weight-bold">Address: </span><br/>
                         <p>{data.document.userInfo.stream}</p>
                         <span className="font-weight-bold">Mobile No.:</span><br/>
                         <p>{data.document.userInfo.mobileNo}</p>
@@ -51,7 +52,10 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
                     <div className="approve__reject d-flex justify-content-around">
                       <form onSubmit={sendEmail}>
                         <div className="input-group">
-                          <input  name="admin" value={admin} onChange={e => setAdmin(e.target.value)} type="text" />
+                          <input  name="admin" value={admin} readOnly={true} onChange={e => setAdmin(e.target.value)} type="text" />
+                        </div>
+                        <div className="input-group">
+                          <input  name="reply_to" readOnly={true} value={data.document.userInfo.email} onChange={e => setEmail(e.target.value)} type="text" />
                         </div>
                         <div className="input-group">
                           <span className="ml-3">Enter Approve or Reject Message:</span>
