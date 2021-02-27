@@ -20,7 +20,7 @@ function AllUsers({ users }) {
   )
 
   return (
-    <ul className="list-group list-group-flush pt-2 pb-2">
+    <ul className="list-group list-group-flush pt-2 pb-2 mb-3">
       {allUser}
     </ul>
   )
