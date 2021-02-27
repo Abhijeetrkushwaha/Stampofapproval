@@ -31,7 +31,7 @@ function Panel() {
           <h3>Admin panel</h3>
         </div>
       </div>
-      <div className="container pt-3">
+      <div className="pt-3">
         <div className="row">
           <div className="col-12 col-lg-8">
             <div className="card mb-3">

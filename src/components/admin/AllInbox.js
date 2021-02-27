@@ -41,7 +41,7 @@ function AllInbox({ documents }) {
                     </ul>
                   </div>
                 </div>
-                <div className="col-12 col-lg-6">
+                <div className="col-12 col-md-6 col-lg-6">
                   <div className="all__inbox__doc">
                     <img src={data.document.url} alt="doc pic" />
                     <h5 className="text-center">
