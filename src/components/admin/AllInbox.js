@@ -61,7 +61,7 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
                           <span className="ml-3">Enter Approve or Reject Message:</span>
                           <input name="message" type="text" placeholder="Approve or Reject" />
                         </div>
-                        <button className="btn">Send Email</button>
+                        <button className="btn">Send Email {email}</button>
                       </form>
                     </div>
                     <button className="btn btn--lg mt-3" onClick={() => deleteMessage(data.id)}>Delete Message</button>
