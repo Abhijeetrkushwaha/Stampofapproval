@@ -93,7 +93,7 @@ function DocUpload({ user, userInfo }) {
             <div className="has__upload text-center">
               <p className="font-weight-bold">You have sent the document.</p>
               <p>Wait for verification.</p>
-              <p>You will receive Stamp of {`(approval or rejection)`} info soon on your registered email.</p>
+              <p>You will receive Stamp of {`(approval or rejection)`} info soon in your registered email.</p>
               <p>Thank you!!</p>
             </div>
           )}
