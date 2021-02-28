@@ -7,7 +7,8 @@ function AllUsers({ users }) {
       return (
         <li key={data.id}className="list-group-item admin__user">
           <img src={data.user.url} alt="user"/>
-          <span className="font-weight-bold ml-2">{`${data.user.userName} ${data.user.lastName}`}</span>
+          <span className="font-weight-bold ml-2">{`${data.user.userName} ${data.user.lastName}`}</span><br/>
+          <span>{data.user.email}</span>
         </li>
       )
     })

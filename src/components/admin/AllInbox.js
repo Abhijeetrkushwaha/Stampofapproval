@@ -5,7 +5,7 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
   // const [admin, setAdmin] = useState('Stamp Of Approval')
   // const [email, setEmail] = useState('')
 
-  let allDocuments = documents.length ? (
+  let allDocuments = documents?.length ? (
     documents.map(data => {
       return (
         <Card key={data.id}>
@@ -86,6 +86,9 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
   return (
     <Accordion>
       {allDocuments} 
+      <div className="text-center">
+        {documents?.length === 0 ? "Inbox is empty" : null }
+      </div>
     </Accordion>
   )
 }

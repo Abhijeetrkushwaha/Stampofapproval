@@ -5,10 +5,10 @@ import AllInbox from './AllInbox';
 import emailjs from 'emailjs-com';
 
 function Panel() {
-  const [documents, setDocuments] = useState([])
+  const [documents, setDocuments] = useState()
   const [users, setUsers] = useState([])
   const [showMessage, setShowMessage] = useState(false)
-  console.log(documents);
+  // console.log(documents);
   // console.log(users);
 
   useEffect(() => {
