@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Accordion, Card, Button } from 'react-bootstrap';
 
 function AllInbox({ documents, sendEmail, deleteMessage }) {
-  const [admin, setAdmin] = useState('Stamp Of Approval')
-  const [email, setEmail] = useState('')
+  // const [admin, setAdmin] = useState('Stamp Of Approval')
+  // const [email, setEmail] = useState('')
 
   let allDocuments = documents.length ? (
     documents.map(data => {
@@ -51,17 +51,23 @@ function AllInbox({ documents, sendEmail, deleteMessage }) {
                     </h5>
                     <div className="approve__reject d-flex justify-content-around">
                       <form onSubmit={sendEmail}>
-                        <div className="input-group">
-                          <input  name="admin" value={admin} readOnly={true} onChange={e => setAdmin(e.target.value)} type="text" />
+                        <div className="input-group d-none">
+                          <input  name="admin" value="Abhijeet Kushwaha" readOnly={true} type="text" />
                         </div>
-                        <div className="input-group">
-                          <input  name="reply_to" readOnly={true} value={data.document.userInfo.email} onChange={e => setEmail(e.target.value)} type="text" />
+                        <div className="input-group d-none">
+                          <input  name="from_name" value="Stamp Of Approval" readOnly={true} type="text" />
+                        </div>
+                        <div className="input-group d-none">
+                          <input  name="to_name" value={data.document.userInfo.userName} readOnly={true} type="text" />
+                        </div>
+                        <div className="input-group d-none">
+                          <input  name="reply_to" value={data.document.userInfo.email} readOnly={true} type="email" />
                         </div>
                         <div className="input-group">
                           <span className="ml-3">Enter Approve or Reject Message:</span>
                           <input name="message" type="text" placeholder="Approve or Reject" />
                         </div>
-                        <button className="btn">Send Email {email}</button>
+                        <button className="btn">Send Email</button>
                       </form>
                     </div>
                     <button className="btn btn--lg mt-3" onClick={() => deleteMessage(data.id)}>Delete Message</button>

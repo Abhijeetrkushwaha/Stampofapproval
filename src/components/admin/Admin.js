@@ -12,7 +12,7 @@ function Admin({user}) {
   const handleSubmit = e => {
     e.preventDefault()
     if(email.trim().length > 0 && password.trim().length > 0){
-      if(email === 'admin@gmail.com' && password === '12345678') {
+      if(email === '12345678' && password === '12345678') {
         setValid(true)
       }
       setErrorMessage('Invalid email or password')
