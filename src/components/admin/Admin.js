@@ -12,7 +12,7 @@ function Admin({user}) {
   const handleSubmit = e => {
     e.preventDefault()
     if(email.trim().length > 0 && password.trim().length > 0){
-      if(email === '12345678' && password === '12345678') {
+      if(email === process.env.REACT_APP_ADMIN_PASSWORD && password === process.env.REACT_APP_ADMIN_PASSWORD) {
         setValid(true)
       }
       setErrorMessage('Invalid email or password')
