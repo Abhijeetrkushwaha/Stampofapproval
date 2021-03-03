@@ -21,25 +21,31 @@ function DocUpload({ user, userInfo }) {
     reader.readAsDataURL(e.target.files[0]);
   }
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    let randomNo = Math.random();
-    if(image) {
-      setErrorMessage('Just a second...Uploading Document')
-      setOnDisable(true)
-      const uploadTask = storage.ref(`images/${randomNo}`).put(image);
+  const docUpload = () => {
+    db.collection("users").doc(user.uid).update({
+      isDoc: 1,
+    });
+  }
 
-      uploadTask.on(
-        "state_changed",
-        (snapshot) => {
-          // progress function...
-        },
-        (err) => {
-          // error function...
-          console.log(err);
-          alert(err.message);
-        },
-        () => {
+  const imageUpload = () => {
+    return new Promise((res, rej) => {
+      let randomNo = Math.random();
+      if(image) {
+        setErrorMessage('Just a second...Uploading Document')
+        setOnDisable(true)
+        const uploadTask = storage.ref(`images/${randomNo}`).put(image);
+
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            // progress function...
+          },
+          (err) => {
+            // error function...
+            console.log(err);
+            alert(err.message);
+          },
+          () => {
           // complete function...
           storage
             .ref("images")
@@ -51,11 +57,10 @@ function DocUpload({ user, userInfo }) {
                 id: user.uid,
                 url
               });
-              db.collection("users").doc(user.uid).update({
-                isDoc: 1,
-              });
+              
               setErrorMessage('')
               setOnDisable(false)
+              res(true)
             })
               .catch((err) => {
                 setErrorMessage(err.message)
@@ -63,8 +68,22 @@ function DocUpload({ user, userInfo }) {
               })
               
             });
-            return true
-    }
+      } else {
+        res(false)
+      }
+      
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const value = await imageUpload()
+    // console.log(value);
+    if(value){
+      docUpload()
+      return value
+    } 
     setErrorMessage('please upload a file')
   }
 
