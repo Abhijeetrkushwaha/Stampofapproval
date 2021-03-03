@@ -60,6 +60,7 @@ function DocUpload({ user, userInfo }) {
               
               setErrorMessage('')
               setOnDisable(false)
+              setImage(null)
               res(true)
             })
               .catch((err) => {
