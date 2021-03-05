@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## Pokédex | Check out your favorite Pokémon!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <img alt="Repository languages count" src="https://img.shields.io/github/languages/top/Abhijeetrkushwaha/pokedex?color=red">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Abhijeetrkushwaha/Stamp-of-approval?color=blue">
+    <img alt="Repository last commit" src="https://img.shields.io/github/last-commit/Abhijeetrkushwaha/Stamp-of-approval?color=yellow" />
+</p>
 
-## Available Scripts
+Pokedex
 
-In the project directory, you can run:
+ Pokedex consist of collection of pokemons, you can search for any Pokémon by typing their name or ID, can get a detail inforamtion about the Pokemon, built with React, Hooks, JavaScript, CSS and Bootstrap.
 
-### `npm start`
+**Project Published on Vercel:** [https://stampofapproval.vercel.app/](https://stampofapproval.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Screen Shot(s)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 1. Collection of Pokemons.
+<img src="./pokedex.png" alt="preview" /> <br/>
 
-### `npm test`
+### 2. Detail of Pokemon.
+<img src="./pokedex-1.png" alt="preview" /> <br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Search Poekmon by name or Id.
+<img src="./pokedex-2.png" alt="preview" />
 
-### `npm run build`
+## Tecnologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **ReactJS** - JavaScript library that is used for building user interfaces specifically for single-page applications.
+- **Axios** -  Making HTTP requests to fetch or save data.
+- **Bootstrap** - CSS framework directed at responsive, mobile-first front-end web development.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-### `npm run eject`
+Installation:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm install`  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To Run Test Suite:  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`npm test`  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To Start Server:
 
-## Learn More
+`npm start`  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To Visit App:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`localhost:3000`  
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
