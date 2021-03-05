@@ -35,6 +35,9 @@ be updated on students e-mail online by the Admin
 ### 4. Dashboard Page.
 <img src="./readme-img/dashboard.png" alt="preview" />
 
+### 4. Profile Page.
+<img src="./readme-img/profile.png" alt="preview" />
+
 ## Tecnologies:
 
 - **ReactJS** - JavaScript library that is used for building user interfaces specifically for single-page applications.
