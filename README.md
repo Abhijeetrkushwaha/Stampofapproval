@@ -1,4 +1,4 @@
-## Pokédex | Check out your favorite Pokémon!
+## Stamp Of Approval
 
 <p align="center">
     <img alt="Repository languages count" src="https://img.shields.io/github/languages/top/Abhijeetrkushwaha/Stampofapproval?color=red">
