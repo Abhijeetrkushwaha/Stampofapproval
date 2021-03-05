@@ -16,19 +16,29 @@ be updated on students e-mail online by the Admin
 
 ## Project Screen Shot(s)
 
-### 1. Collection of Pokemons.
-<img src="./pokedex.png" alt="preview" /> <br/>
+### 1. Sign Up Pages
+#### Page one
+<img src="./readme-img/signup-one.png" alt="preview" /> <br/>
 
-### 2. Detail of Pokemon.
-<img src="./pokedex-1.png" alt="preview" /> <br />
+#### Page two
+<img src="./readme-img/signup-two.png" alt="preview" /> <br/>
 
-### 3. Search Poekmon by name or Id.
-<img src="./pokedex-2.png" alt="preview" />
+#### Page three
+<img src="./readme-img/signup-three.png" alt="preview" /> <br/>
+
+### 2. Login Page
+<img src="./readme-img/login.png" alt="preview" /> <br />
+
+### 3. Admin Page.
+<img src="./readme-img/admin.png" alt="preview" />
+
+### 4. Dashboard Page.
+<img src="./readme-img/dashboard.png" alt="preview" />
 
 ## Tecnologies:
 
 - **ReactJS** - JavaScript library that is used for building user interfaces specifically for single-page applications.
-- **Axios** -  Making HTTP requests to fetch or save data.
+- **Firebase** -  Creating Backend for application.
 - **Bootstrap** - CSS framework directed at responsive, mobile-first front-end web development.
 
 ## Installation and Setup Instructions
