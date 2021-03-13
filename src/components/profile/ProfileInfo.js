@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { db } from '../../firebase'
 
 function ProfileInfo({ userInfo, user }) {
@@ -14,7 +14,7 @@ function ProfileInfo({ userInfo, user }) {
   const [toggle, setToggle] = useState(true)
   const [showMessage, setShowMessage] = useState(false)
 
-  const inputRef = useRef(null)
+  const inputRef = createRef()
  
 
   useEffect(() => {
